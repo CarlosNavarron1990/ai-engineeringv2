@@ -5,7 +5,25 @@ guides/
 # Local environment / editor cruft (the project also has its own .gitignore
 # inside estimator/, this catches files at the repo root).
 .DS_Store
+._*
 .idea/
 .vscode/
 __pycache__/
 .claude/
+# Kuraka framework files (versioned externally; not source of this repo)
+.codex/agents/
+.codex/skills/
+.codex/commands/
+.codex/prompts/
+.codex/rules/16-agent-backup.md
+.codex/rules/17-kuraka-token-optimizations.md
+.codex/rules/18-duplication-aware-refactor.md
+.codex/rules/19-evidence.md
+.codex/.kuraka-mount-manifest.json
+# Ultra Ahorro per-cycle scope/baseline state (ephemeral, per session)
+.codex/ultra-ahorro/
+# Per-cycle telemetry JSONs (noise; the consolidated DASHBOARD.md is tracked)
+docs/process/agent-telemetry/*.json
+# Tool scratch dirs (never track)
+.playwright-mcp/
+.pytest_cache/
